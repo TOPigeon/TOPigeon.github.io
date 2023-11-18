@@ -7,4 +7,7 @@ title:  "Making Jekyll Posts Easier"
 
 <h2>How to make it easier</h2>
 <p>My minor inconvenience of adding the date was solved by creating a bash script that I run to retrieve the current date and append some text input and create a markdown file.</p>
-<img scr="{{../Assets/newpost.png}}" alt="An image of the bash script that creates new post files"/>
+![Image of the bash script that creates new post files](/assets/newpost.png)
+<p>The second part of making it easier was to add a vim skeleton file that adds the template required for Jekyll. To start I created a template in ~/.vim/templates/ that has the Jekyll header for content posts. After Making the template file I had to edit the ~/.vimrc file with the following line "autocmd BufNewFile /path/to/the/JekyllBlog/*.markdown 0r ~/.vim/templates/markdown-template.markdown".
+
+Now when a markdown file is created with vim in the /JekyllBlog/ directory is has the file headers automatically created. 
