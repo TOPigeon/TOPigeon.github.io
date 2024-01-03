@@ -6,7 +6,12 @@ read -p "Enter a name for the file in file-name-format:" user_input
 
 file_name="${current_date}-${user_input}.markdown"
 
-touch "$file_name"
-
+touch  "$file_name"
+echo "
+---
+layout: post
+title:  "INSERT TITLE"
+---
+" >> $file_name
 echo "File \"$file_name\" created successfully"
 
